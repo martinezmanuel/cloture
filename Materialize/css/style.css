@@ -1,0 +1,147 @@
+h1{
+	text-align:center;
+	font-style:italic;
+    font-size:3em;
+    text-shadow:1px 1px 1px black;
+    color: #368BC1;
+}
+
+h2{
+	text-align:center;
+	margin-top:auto;
+    font-size: 2em;
+    color: #368BC1;
+}
+h3{
+	text-align:center;
+	margin-top:50px;
+    font-size: 1.5em;
+    color: #368BC1;
+}
+
+}
+
+button{
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+option{
+	text-align: center;
+}
+input[type="number"]{
+  width: 15%;
+  -moz-appearance: textfield;
+}
+
+.button{
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 25px;
+}
+
+.btn-m, .btn-large-m,
+.btn-flat-m {
+  border: none;
+  border-radius: 2px;
+  display: inline-block;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#centrage{
+	margin-left: 35%;
+}
+
+.browser-default{
+	width: 30%;
+	margin-right: 45%;
+}
+
+.collapsible-header i {
+    width: 1rem;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    display: block;
+    float: left;
+    text-align: center;
+    margin-right: .2rem;
+    margin-bottom: 2rem;
+}
+
+table, td, th { 
+  border: 1px solid #368BC1;
+   text-align: center;
+}
+ 
+th { border-bottom-width: 2px; }
+
+#premiere{
+  border-color: transparent;
+}
+
+#deuxieme{
+  border-color: transparent;
+}
+
+#troisieme{
+  border-color: transparent;
+}
+
+#quatrieme{
+border-left: transparent;
+border-bottom-color: transparent;
+}
+
+#total{
+  background-color: #eee;
+}
+
+@media (max-width: 40em) {
+   table, tbody { display: block; }
+   tr {
+      display: table;
+      width: 100%;
+   }
+   th {
+      font-size: 0;
+      border: none;
+      visibility: hidden;
+   }
+   td, th { display: table-row; }
+   td:before {
+      content: attr(data-headers);
+      display: table-cell;
+      width: 60%;
+      border-right:  1px solid #368BC1;      
+   }
+  #premiere{
+  border-color: transparent;
+  visibility: hidden;
+  }
+  #deuxieme{
+  border-color: transparent;
+  visibility: hidden;
+  }
+  #troisieme{
+  border-color: transparent;
+  visibility: hidden;
+  }
+  #quatrieme{
+  border-left: transparent;
+  border-bottom-color: transparent;
+  visibility: hidden;
+  }
+  #total{
+  background-color: #eee;
+  }
+}
+
+
+
