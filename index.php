@@ -141,7 +141,7 @@ session_start();
         </li> 
       </ul>
       <div class="button"> 
-        <button class="btn waves-effect waves-light light-blue" type="submit" name="resultat" >
+        <button class="btn waves-effect waves-light green" type="submit" name="resultat" >
           <i class="material-icons right"></i>Votre éléctrificateur
         </button>
       </div> 

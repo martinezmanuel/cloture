@@ -496,10 +496,10 @@ $_SESSION['total']         = $total;
     </tbody>
     </table>
     <div class="button"> 
-        <button class="btn waves-effect waves-light light-blue" id="return" type="button" onclick="location.href='index.php';" value="retour accueil" >
+        <button class="btn waves-effect waves-light green" id="return" type="button" onclick="location.href='index.php';" value="retour accueil" >
           <i class="material-icons right"></i>Retour à l'accueil
         </button> 
-        <button class="btn waves-effect waves-light light-blue" id="contact" type="button" onclick="location.href='demande-devis.php';" value="formulaire de contact" >
+        <button class="btn waves-effect waves-light green" id="contact" type="button" onclick="location.href='demande-devis.php';" value="formulaire de contact" >
           <i class="material-icons right"></i>Demande de devis
         </button> 
     </div>   
