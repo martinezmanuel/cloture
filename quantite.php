@@ -87,28 +87,7 @@ error_reporting(E_ALL);
         <button data-target="modal" class="btn-m modal-trigger waves-light black">Calcul</button>
               <!-- Ta modal -->
           <div id="modal" class="modal modal-fixed-footer">
-            <div class="modal-content">                 
-              <h3>Calcul du périmètre en mètre</h3>
-                <div onsubmit="return false" oninput="document.getElementById('p').innerHTML = 
-                  parseFloat(document.getElementById('a').value) 
-                + parseFloat(document.getElementById('b').value) 
-                + parseFloat(document.getElementById('c').value)
-                + parseFloat(document.getElementById('d').value)">        
-                  <input name="a" id="a" type="number" step="any"> +
-                  <input name="b" id="b" type="number" step="any"> +
-                  <input name="c" id="c" type="number" step="any"> +
-                  <input name="d" id="d" type="number" step="any"> =
-                  <output name="p" id="p" for="a b c d"></output>      
-                </div>
-             <h3>Calcul du nombre de bobine nécessaire</h2>
-                <div onsubmit="return false" oninput="document.getElementById('z').innerHTML =
-                  parseFloat(document.getElementById('e').value) 
-                / parseFloat(document.getElementById('f').value) ">        
-                  <input name="e" id="e" type="number" step="any"> /
-                  <input name="f" id="f" type="number" step="any"> =
-                  <output name="z" id="z" for="e f "></output>
-                </div> 
-            </div>
+           
             <div class="modal-footer">
               <a href="#!" class="modal-action modal-close waves-effect waves-light light-blue btn-flat-m ">Fermer</a>
             </div>
