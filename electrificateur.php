@@ -25,14 +25,11 @@ error_reporting(E_ALL);
   <div class="container">
     <strong>  <h1>Choix de l'électrificateur</h1> </strong>
     <form method="POST" action="traitement1.php">      
-      <h2>Electrificateur</h2>
-
+      
       <?php 
         $electrificatorResults = $_SESSION['mysql_result_elec'];
 
-          echo '<div >';  
-          echo '<h3>Choix de votre électrificateur </h3>';
-          echo '</div>';    
+  
           for ($i = 0; $i < count($electrificatorResults); $i++) {
           echo '<div id="centrage">';   
           echo '<ul>'; 

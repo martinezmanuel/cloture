@@ -24,13 +24,9 @@ error_reporting(E_ALL);
 <body>  
    <div class="container">
     <strong>  <h1> Conducteur</h1> </strong>
-    <form method="POST" action="traitement3.php">
-      <h2>Conducteur possible</h2>               
+    <form method="POST" action="traitement3.php">           
   <?php 
    $conductorResults = $_SESSION['mysql_result_conducteur'];    
-    echo '<div >';  
-    echo '<h3>Les differents Conducteur  </h3>';   
-    echo '</div>';  
      for ($i = 0; $i < count($conductorResults); $i++) {
     echo '<div id="centrage">'; 
   

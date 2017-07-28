@@ -98,6 +98,18 @@ session_start();
             <h2>Longueur de la cloture</h2>
           </div>
           <div class="collapsible-body" id="centrage">
+             <h3>Calcul pour trouver le périmetre de votre champ</h3>
+              <div onsubmit="return false" oninput="document.getElementById('p').innerHTML = 
+                  parseFloat(document.getElementById('a').value) 
+                + parseFloat(document.getElementById('b').value) 
+                + parseFloat(document.getElementById('c').value)
+                + parseFloat(document.getElementById('d').value)">        
+                  <input name="a" id="a" type="number" step="any"> +
+                  <input name="b" id="b" type="number" step="any"> +
+                  <input name="c" id="c" type="number" step="any"> +
+                  <input name="d" id="d" type="number" step="any"> =
+                  <output name="p" id="p" for="a b c d"></output>      
+                </div>
             <ul>  
               <li>              
                 <input type="radio" value="inf-1" name="distance" id="inf-1"  /> 

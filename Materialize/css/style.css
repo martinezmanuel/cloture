@@ -3,19 +3,18 @@ h1{
 	font-style:italic;
     font-size:3em;
     text-shadow:1px 1px 1px black;
-    color: #43A047;
+    color: #8FCF3C;
 }
 
 h2{
 	text-align:center;
 	margin-top:auto;
     font-size: 2em;
-    color: #43A047;
+    color: #84D41D;
 }
 h3{
-	text-align:center;
 	margin-top:50px;
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: #43A047;
 }
 
@@ -24,6 +23,7 @@ h3{
 button{
 	margin-right: auto;
 	margin-left: auto;
+
 }
 
 
@@ -45,6 +45,7 @@ input[type="number"]{
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 25px;
+  color: #85C630;
 }
 
 .btn-m, .btn-large-m,
@@ -52,6 +53,7 @@ input[type="number"]{
   border: none;
   border-radius: 2px;
   display: inline-block;
+  color: #85C630;
   -webkit-tap-highlight-color: transparent;
 }
 

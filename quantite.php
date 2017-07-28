@@ -31,13 +31,13 @@ error_reporting(E_ALL);
 
       <form method="POST" action="traitement4.php">
     <?php
-      $animal           = $_SESSION['mysql_result_animal'] ; 
-      $nom              = $_SESSION['mysql_result_type_elec'] ; 
-      $longueur         = $_SESSION['mysql_result_distance'] ; 
-      $type             = $_SESSION['mysql_result_veget'] ; 
+      $animal           = $_SESSION['mysql_result_animal']; 
+      $nom              = $_SESSION['mysql_result_type_elec']; 
+      $longueur         = $_SESSION['mysql_result_distance']; 
+      $type             = $_SESSION['mysql_result_veget']; 
       $electrificateur  = $_SESSION['electrificateur'];
       $typeconducteur   = $_SESSION['conduc'];
-      $fils             = $_SESSION['fil'] ;
+      $fils             = $_SESSION['fil'];
       $ruban            = $_SESSION['ruban'];
       $filet            = $_SESSION['filet'];
       $corde            = $_SESSION['corde'];
@@ -84,7 +84,7 @@ error_reporting(E_ALL);
       echo "</p>"
       ?>
       <h2>Calcul pour trouver le périmetre de votre champ et le nombre de bobine suivant le périmetre
-        <button data-target="modal" class="btn-m modal-trigger waves-light light-blue">Calcul</button>
+        <button data-target="modal" class="btn-m modal-trigger waves-light black">Calcul</button>
               <!-- Ta modal -->
           <div id="modal" class="modal modal-fixed-footer">
             <div class="modal-content">                 

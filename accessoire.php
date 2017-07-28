@@ -22,9 +22,8 @@ error_reporting(E_ALL);
 </head>
 <body>
 	<div class="container">
-  <strong>  <h1> Accessoires</h1> </strong>
+  <strong>  <h1> Accessoires choix facultatif</h1> </strong>
     <form method="POST" action="quantite.php">
-      <h2>Accessoires suivant vos choix</h2>
             <?php 
               
               $piquet     = $_SESSION['mysql_result_piquet'] ;
