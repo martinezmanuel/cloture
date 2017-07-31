@@ -6,7 +6,7 @@
   <!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Css Materialize -->
-	<link type="text/css" rel="stylesheet" href="Materialize/css/materialize.min.css"  media="screen,projection"/>
+	<link type="text/css" rel="stylesheet" href="Materialize/css/materialize.min.css"  media="screen"/>
   <!-- Css perso -->
 	<link type="text/css" rel="stylesheet" href="Materialize/css/style.css"/>
   <!-- lancement du jquery pour que les scripts passent -->

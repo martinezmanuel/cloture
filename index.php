@@ -9,7 +9,7 @@ session_start();
   <!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Css Materialize -->
-	<link type="text/css" rel="stylesheet" href="Materialize/css/materialize.min.css"  media="screen,projection"/>
+	<link type="text/css" rel="stylesheet" href="Materialize/css/materialize.min.css"  media="screen"/>
   <!-- Css perso -->
 	<link type="text/css" rel="stylesheet" href="Materialize/css/style.css"/>
   <!-- lancement du jquery pour que les scripts passent -->
@@ -36,7 +36,7 @@ session_start();
     </script>
 
 <div class="container">
-	<strong>  <h1>Choisir sa cloture</h1> </strong>
+	  <h1>Choisir sa cloture</h1> 
     <form method="POST" action="traitement.php">
       <ul class="collapsible" data-collapsible="accordion">
         <li>
@@ -104,11 +104,11 @@ session_start();
                 + parseFloat(document.getElementById('b').value) 
                 + parseFloat(document.getElementById('c').value)
                 + parseFloat(document.getElementById('d').value)">        
-                  <input name="a" id="a" type="number" step="any"> +
-                  <input name="b" id="b" type="number" step="any"> +
-                  <input name="c" id="c" type="number" step="any"> +
-                  <input name="d" id="d" type="number" step="any"> =
-                  <output name="p" id="p" for="a b c d"></output>      
+                  <input name="a" id="a" type="number" step="any" placeholder="longueur 1"> +
+                  <input name="b" id="b" type="number" step="any" placeholder="largeur 1"> +
+                  <input name="c" id="c" type="number" step="any" placeholder="longueur 2"> +
+                  <input name="d" id="d" type="number" step="any" placeholder="largeur 2"> =
+                  <output name="p" id="p" for="a b c d" ></output>&nbsp;m     
                 </div>
             <ul>  
               <li>              

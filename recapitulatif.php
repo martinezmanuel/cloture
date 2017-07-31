@@ -41,7 +41,7 @@ $quantitest     = $_SESSION['quantitetest'];
   <!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Css Materialize -->
-  <link type="text/css" rel="stylesheet" href="Materialize/css/materialize.min.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="Materialize/css/materialize.min.css"  media="screen"/>
   <!-- Css perso -->
   <link type="text/css" rel="stylesheet" href="Materialize/css/style.css"/>
   <!-- lancement du jquery pour que les scripts passent -->
@@ -54,7 +54,7 @@ $quantitest     = $_SESSION['quantitetest'];
 <body>  
   <div class="container">
 
-  <strong><h1> Résultat de votre demande </h1></strong>
+  <h1> Résultat de votre demande </h1>
   
     <table class="centered">
       <thead> 
@@ -496,7 +496,7 @@ $_SESSION['total']         = $total;
     </tbody>
     </table>
     <div class="button"> 
-        <button class="btn waves-effect waves-light green" id="return" type="button" onclick="location.href='index.php';" value="retour accueil" >
+        <button class="btn-flat waves-effect" id="return" type="button" onclick="location.href='index.php';" value="retour accueil" >
           <i class="material-icons right"></i>Retour à l'accueil
         </button> 
         <button class="btn waves-effect waves-light green" id="contact" type="button" onclick="location.href='demande-devis.php';" value="formulaire de contact" >

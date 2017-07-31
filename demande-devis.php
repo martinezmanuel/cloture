@@ -169,7 +169,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
   <!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Css Materialize -->
-	<link type="text/css" rel="stylesheet" href="Materialize/css/materialize.min.css"  media="screen,projection"/>
+	<link type="text/css" rel="stylesheet" href="Materialize/css/materialize.min.css"  media="screen"/>
   <!-- Css perso -->
 	<link type="text/css" rel="stylesheet" href="Materialize/css/style.css"/>
   <!-- lancement du jquery pour que les scripts passent -->
@@ -179,13 +179,13 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 </head>
 <body>
 	<div class="container">
-		<strong><h1>Formulaire de demande de devis</h1></strong>
+		<h1>Formulaire de demande de devis</h1>
 		<div class="row" id="centrage2">
          <form class="col s12" action="demande-devis.php" method="post">
             <div class="row">
                <div class="input-field col s12">
                   	<i class="material-icons prefix">account_circle</i>
-                  	<input placeholder="Nom" name="name" id="inputname" pattern="([a-zA-Z\s]){1,30}" type="text" class="form-control"value="<?php echo isset($_SESSION['inputs']['name'])? $_SESSION['inputs']['name'] : ''; ?>" required>
+                  	<input placeholder="Nom" name="name" id="inputname" pattern="([a-zA-Z\s]){1,30}" type="text" class="form-control" value="<?php echo isset($_SESSION['inputs']['name'])? $_SESSION['inputs']['name'] : ''; ?>" required>
                   	<label for="inputname"></label>
                </div>               
             </div>
@@ -199,12 +199,12 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
             <div class="row" >
                <div class="input-field col s12">
                		<i class="material-icons prefix">message</i>
-                  	<input placeholder="Votre demande" name="message" id="inputmessage" type="text"value="<?php echo isset($_SESSION['inputs']['message'])? $_SESSION['inputs']['message'] : ''; ?>" required >
+                  	<input placeholder="Votre demande" name="message" id="inputmessage" type="text" value="<?php echo isset($_SESSION['inputs']['message'])? $_SESSION['inputs']['message'] : ''; ?>" required >
                   	<label for="inputmessage"></label>
                </div>
             </div>
             <div class="button">
-              <input class="btn waves-effect waves-light green" id="return" type="button" onclick="location.href='index.php';" value="retour accueil" />
+              <input class="btn-flat waves-effect" id="return" type="button" onclick="location.href='index.php';" value="retour accueil" />
               <button class="btn waves-effect waves-light green" type="submit">envoyer<i class="material-icons right">send</i></button>
             </div>
         </form>

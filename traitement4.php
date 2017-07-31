@@ -41,6 +41,7 @@ $quantiteaccerub  = $_POST['quantiteaccerub'];
 $quantiteaccentre = $_POST['quantiteaccentre'];
 $quantitetest     = $_POST['quantitetest'];
 
+
 $reqelec= "SELECT  * FROM electriseur
         WHERE electriseur = '$electrificateur'
         ";
@@ -131,8 +132,8 @@ $_SESSION['data_test']     = $data_test;
 
 $_SESSION['quantitefil']      = $quantitefil;
 $_SESSION['quantitecorde']    = $quantitecorde;
-$_SESSION['quantitefilet']    = $quantiteruban;
-$_SESSION['quantiteruban']    = $quantitefilet;
+$_SESSION['quantitefilet']    = $quantitefilet;
+$_SESSION['quantiteruban']    = $quantiteruban;
 $_SESSION['quantitepiquet']   = $quantitepiquet;
 $_SESSION['quantitecable']    = $quantitecable;
 $_SESSION['quantiteisocord']  = $quantiteisocord;

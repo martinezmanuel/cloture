@@ -10,7 +10,7 @@ error_reporting(E_ALL);
   <!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Css Materialize -->
-	<link type="text/css" rel="stylesheet" href="Materialize/css/materialize.min.css"  media="screen,projection"/>
+	<link type="text/css" rel="stylesheet" href="Materialize/css/materialize.min.css"  media="screen"/>
   <!-- Css perso -->
 	<link type="text/css" rel="stylesheet" href="Materialize/css/style.css"/>
   <!-- lancement du jquery pour que les scripts passent -->
@@ -20,14 +20,8 @@ error_reporting(E_ALL);
     <title>Quantité</title>
 </head>
 <body>
-  <script>
-    $(document).ready(function() {
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $('.modal-trigger').leanModal();
-    });
-    </script>
   <div class="container">
-    <strong> <h1> Quantité nécessaire</h1> </strong>
+     <h1> Quantité nécessaire</h1> 
 
       <form method="POST" action="traitement4.php">
     <?php
@@ -70,29 +64,21 @@ error_reporting(E_ALL);
       }
       echo "<p align='center'>";
       echo "<center>Votre animal à garder : <b>".$animal."</b>";
-      echo "</br>";
+      echo "<br>";
       echo "Votre type d'energie : <b>".$nom."</b>";
-      echo "</br>";
+      echo "<br>";
       echo "Votre distance : <b>".$longueur." km</b>";
-      echo "</br>";
+      echo "<br>";
       echo "Votre type de végétation : <b>".$type."</b>";
-      echo "</br>";
+      echo "<br>";
       echo "Votre electrificateur : <b>".$electrificateur."</b>";
-      echo "</br>";
+      echo "<br>";
       echo "Votre type de conducteur : <b>".$typeconducteur."</b>";
-      echo "</br>";
-      echo "</p>"
+      echo "<br>";
+      echo "</center>";
+      echo "</p>";
       ?>
-      <h2>Calcul pour trouver le périmetre de votre champ et le nombre de bobine suivant le périmetre
-        <button data-target="modal" class="btn-m modal-trigger waves-light black">Calcul</button>
-              <!-- Ta modal -->
-          <div id="modal" class="modal modal-fixed-footer">
-           
-            <div class="modal-footer">
-              <a href="#!" class="modal-action modal-close waves-effect waves-light light-blue btn-flat-m ">Fermer</a>
-            </div>
-          </div>
-      </h2>
+
         <table class="centered">
           <thead> 
             <tr>

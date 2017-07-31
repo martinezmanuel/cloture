@@ -11,7 +11,7 @@ error_reporting(E_ALL);
   <!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Css Materialize -->
-  <link type="text/css" rel="stylesheet" href="Materialize/css/materialize.min.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="Materialize/css/materialize.min.css"  media="screen"/>
   <!-- Css perso -->
   <link type="text/css" rel="stylesheet" href="Materialize/css/style.css"/>
   <!-- lancement du jquery pour que les scripts passent -->
@@ -23,7 +23,7 @@ error_reporting(E_ALL);
 </head>
 <body>  
  <div class="container">
-  <strong>  <h1>Choix du type de conducteur</h1> </strong>
+ <h1>Choix du type de conducteur</h1> 
     <form method="POST" action="traitement2.php">
                     
  <?php 
