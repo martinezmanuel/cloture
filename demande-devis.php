@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
       $headers = 'MIME-Version: 1.0'."\r\n";
       $headers .= 'Content-type: text/html; charset=UTF-8'."\r\n";
       $headers .= 'Demande devis clotures'."\r\n";
-      $destinataire = 'm.martinez@agram.fr,'.$email.''; // Adresse email du webmaster (à personnaliser)      
+      $destinataire = 'm.favard@agram.fr,'.$email.''; // Adresse email du webmaster (à personnaliser)      
       $sujet = 'Demande de devis clotures'; // Titre de l'email
       $contenu = 
       '<html>
