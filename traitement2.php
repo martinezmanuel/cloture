@@ -1,14 +1,6 @@
 <?php
 session_start();
 error_reporting(E_ALL);
-/*$serveur = "localhost";
-$admin   = "root";
-$mdp     = "root";
-$base    = "cloture";*/
-$serveur = "localhost";
-$admin   = "clotucra_manu";
-$mdp     = "220972Manuel";
-$base    = "clotucra_cloture";
 
 $animal      = $_SESSION['mysql_result_animal']; 
 $nom         = $_SESSION['mysql_result_type_elec']; 

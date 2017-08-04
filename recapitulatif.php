@@ -77,20 +77,20 @@ if(!empty($dataelec)){
     echo 'Electrificateur';
     echo '</td>';  
     echo '<td headers="desi">'; 
-    echo $dataelec['electriseur'];
+    echo $dataelec['0']['electriseur'];
     echo '</td>';
     echo '<td headers="prix">';
-    echo $dataelec['prixelec'];
+    echo $dataelec['0']['prixelec'];
     echo '</td>';
     echo '<td headers="quant">';
     echo $quantielec = 1;
     echo '</td>';
     echo '<td headers="tot">';
-    echo $totalelec = $dataelec['prixelec'] * $quantielec;
+    echo $totalelec = $dataelec['0']['prixelec'] * $quantielec;
     echo '</td>';
     echo '</tr>';
-    $arrayElec = array_combine(array($dataelec['electriseur']),array($totalelec));
-    $arrayPriQuantiElec = array_combine(array($dataelec['prixelec']), array($quantielec));
+    $arrayElec = array_combine(array($dataelec['0']['electriseur']),array($totalelec));
+    $arrayPriQuantiElec = array_combine(array($dataelec['0']['prixelec']), array($quantielec));
   }
   
  if(!empty($datafil) && $quantifil>0 ){ 
@@ -99,10 +99,10 @@ if(!empty($dataelec)){
     echo 'Fil';
     echo '</td>';  
     echo '<td headers="desi">'; 
-    echo $datafil['fil'];
+    echo $datafil['0']['fil'];
     echo '</td>';
     echo '<td headers="prix">';
-    echo $datafil['prixfil'];
+    echo $datafil['0']['prixfil'];
     echo '</td>';
     echo '<td headers="quant">';
     echo $quantifil;
@@ -111,7 +111,7 @@ if(!empty($dataelec)){
     echo $totalfil = $datafil['prixfil']*$quantifil;
     echo '</td>';
     echo '</tr>';
-    $arrayFil = array_combine(array($datafil['fil']), array($totalfil));
+    $arrayFil = array_combine(array($datafil['0']['fil']), array($totalfil));
     $arrayPriQuantiFil = array_combine(array($datafil['prixfil']), array($quantifil));
 }
 
@@ -127,20 +127,20 @@ if(!empty($datarub) && $quantiruban>0){
     echo 'Ruban';
     echo '</td>';   
     echo '<td headers="desi">'; 
-    echo $datarub['ruban']; 
+    echo $datarub['0']['ruban']; 
     echo '</td>';
     echo '<td headers="prix">';
-    echo $datarub['prixruban'];
+    echo $datarub['0']['prixruban'];
     echo '</td>';
     echo '<td headers="quant">';
     echo $quantiruban;
     echo '</td>';
     echo '<td headers="tot">';
-    echo $totalrub = $datarub['prixruban']*$quantiruban;
+    echo $totalrub = $datarub['0']['prixruban']*$quantiruban;
     echo '</td>';
     echo '</tr>';
-    $arrayRub = array_combine(array($datarub['ruban']), array($totalrub));
-    $arrayPriQuantiRub = array_combine(array($datarub['prixruban']), array($quantiruban));
+    $arrayRub = array_combine(array($datarub['0']['ruban']), array($totalrub));
+    $arrayPriQuantiRub = array_combine(array($datarub['0']['prixruban']), array($quantiruban));
 }
 
 elseif (empty($datarub) || $quantiruban==0) {
@@ -155,20 +155,20 @@ if(!empty($datacord) && $quanticorde>0){
     echo 'Corde';
     echo '</td>';   
     echo '<td headers="desi">'; 
-    echo $datacord['corde'];
+    echo $datacord['0']['corde'];
     echo '</td>';
     echo '<td headers="prix">'; 
-    echo $datacord['prixcorde'];
+    echo $datacord['0']['prixcorde'];
     echo '</td>';
     echo '<td headers="quant">';
     echo $quanticorde;
     echo '</td>';
     echo '<td headers="tot">';
-    echo $totalcord = $datacord['prixcorde']*$quanticorde;
+    echo $totalcord = $datacord['0']['prixcorde']*$quanticorde;
     echo '</td>';
     echo '</tr>';
-    $arrayCord = array_combine(array($datacord['corde']), array($totalcord));
-    $arrayPriQuantiCord = array_combine(array($datacord['prixcorde']), array($quanticorde));
+    $arrayCord = array_combine(array($datacord['0']['corde']), array($totalcord));
+    $arrayPriQuantiCord = array_combine(array($datacord['0']['prixcorde']), array($quanticorde));
 }
 
 elseif (empty($datacord) || $quanticorde==0 ) {
@@ -183,20 +183,20 @@ if(!empty($datafilet)&& $quantifilet>0){
     echo 'Filet';
     echo '</td>';   
     echo '<td headers="desi">';
-    echo $datafilet['filet'];
+    echo $datafilet['0']['filet'];
     echo '</td>';
     echo '<td headers="prix">';   
-    echo $datafilet['prixfilet'];
+    echo $datafilet['0']['prixfilet'];
     echo '</td>';
     echo '<td headers="quant">';
     echo $quantifilet;
     echo '</td>';
     echo '<td headers="tot">';
-    echo $totalfilet = $datafilet['prixfilet']*$quantifilet;
+    echo $totalfilet = $datafilet['0']['prixfilet']*$quantifilet;
     echo '</td>';
     echo '</tr>';
-    $arrayFilet = array_combine(array($datafilet['filet']), array($totalfilet));
-    $arrayQuantiFilet = array_combine(array($datafilet['prixfilet']), array($quantifilet));
+    $arrayFilet = array_combine(array($datafilet['0']['filet']), array($totalfilet));
+    $arrayQuantiFilet = array_combine(array($datafilet['0']['prixfilet']), array($quantifilet));
 }
 
 elseif (empty($datafilet) || $quantifilet==0) {
@@ -211,20 +211,20 @@ if(!empty($datapiquet) && $quantipiquet>0){
     echo 'Piquet terre';
     echo '</td>';   
     echo '<td headers="desi">';  
-    echo $datapiquet['piquet'];
+    echo $datapiquet['0']['piquet'];
     echo '</td>';
     echo '<td headers="prix">';
-    echo $datapiquet['prixpiquter'];
+    echo $datapiquet['0']['prixpiquter'];
     echo '</td>';
     echo '<td headers="quant">';
     echo $quantipiquet;
     echo '</td>';
     echo '<td headers="tot">';
-    echo $totalpiquet = $datapiquet['prixpiquter']*$quantipiquet;
+    echo $totalpiquet = $datapiquet['0']['prixpiquter']*$quantipiquet;
     echo '</td>';
     echo '</tr>';
-    $arrayPiquet = array_combine(array($datapiquet['piquet']), array($totalpiquet));
-    $arrayPriQuantiPiq = array_combine(array($datapiquet['prixpiquter']), array($quantipiquet));
+    $arrayPiquet = array_combine(array($datapiquet['0']['piquet']), array($totalpiquet));
+    $arrayPriQuantiPiq = array_combine(array($datapiquet['0']['prixpiquter']), array($quantipiquet));
 }
 
 elseif (empty($datapiquet) || $quantipiquet==0 ) {
@@ -239,20 +239,20 @@ if(!empty($datacable) && $quanticable>0){
     echo 'Cable HT';
     echo '</td>';   
     echo '<td headers="desi">'; 
-    echo $datacable['cable'];
+    echo $datacable['0']['cable'];
     echo '</td>';
     echo '<td headers="prix">';  
-    echo $datacable['prixcableht'];
+    echo $datacable['0']['prixcableht'];
     echo '</td>';
     echo '<td headers="quant">';
     echo $quanticable;
     echo '</td>';
     echo '<td headers="tot">';
-    echo $totalcable = $datacable['prixcableht']*$quanticable;
+    echo $totalcable = $datacable['0']['prixcableht']*$quanticable;
     echo '</td>';
     echo '</tr>';  
-    $arrayCable = array_combine(array($datacable['cable']), array($totalcable));
-    $arrayPriQuantiCabl = array_combine(array($datacable['prixcableht']), array($quanticable));
+    $arrayCable = array_combine(array($datacable['0']['cable']), array($totalcable));
+    $arrayPriQuantiCabl = array_combine(array($datacable['0']['prixcableht']), array($quanticable));
 }
 
 elseif (empty($datacable)|| $quanticable==0) {
@@ -267,20 +267,20 @@ if(!empty($datisocord)&& $quantisocord >0){
     echo 'Isolateur corde';
     echo '</td>';   
     echo '<td headers="desi">'; 
-    echo $datisocord['isocord']; 
+    echo $datisocord['0']['isocord']; 
     echo '</td>';
     echo '<td headers="prix">';  
-    echo $datisocord['prixisocorde'];
+    echo $datisocord['0']['prixisocorde'];
     echo '</td>';
     echo '<td headers="quant">';
     echo $quantisocord;
     echo '</td>';
     echo '<td headers="tot">';
-    echo $totalisocord = $datisocord['prixisocorde']*$quantisocord;
+    echo $totalisocord = $datisocord['0']['prixisocorde']*$quantisocord;
     echo '</td>';
     echo '</tr>';
-    $arrayIsocord = array_combine(array($datisocord['isocord']), array($totalisocord));
-    $arrayPriQuantIsocord = array_combine(array($datisocord['prixisocorde']), array($quantisocord));
+    $arrayIsocord = array_combine(array($datisocord['0']['isocord']), array($totalisocord));
+    $arrayPriQuantIsocord = array_combine(array($datisocord['0']['prixisocorde']), array($quantisocord));
 }
 
 elseif (empty($datisocord)||$quantisocord==0) {
@@ -295,20 +295,20 @@ if(!empty($dataisofil) && $quantisofil>0){
     echo 'Isolateur fil';
     echo '</td>';   
     echo '<td headers="desi">'; 
-    echo $dataisofil['isofil']; 
+    echo $dataisofil['0']['isofil']; 
     echo '</td>';
     echo '<td headers="prix">'; 
-    echo $dataisofil['prixisofil'];
+    echo $dataisofil['0']['prixisofil'];
     echo '</td>';
     echo '<td headers="quant">';
     echo $quantisofil;
     echo '</td>';
     echo '<td headers="tot">';
-    echo $totalisofil = $dataisofil['prixisofil']*$quantisofil;
+    echo $totalisofil = $dataisofil['0']['prixisofil']*$quantisofil;
     echo '</td>';
     echo '</tr>';
-    $arrayIsofil = array_combine(array($dataisofil['isofil']), array($totalisofil));
-    $arrayPriQuantIsofil = array_combine(array($dataisofil['prixisofil']), array($quantisofil));
+    $arrayIsofil = array_combine(array($dataisofil['0']['isofil']), array($totalisofil));
+    $arrayPriQuantIsofil = array_combine(array($dataisofil['0']['prixisofil']), array($quantisofil));
 }
 
 elseif (empty($datisofil) ||$quantisofil==0 ) {
@@ -323,20 +323,20 @@ if(!empty($dataccefil) && $quantiaccefil>0){
     echo 'Accesoire fil';
     echo '</td>';   
     echo '<td headers="desi">';
-    echo $dataccefil['accefil'];  
+    echo $dataccefil['0']['accefil'];  
     echo '</td>';
     echo '<td headers="prix">';  
-    echo $dataccefil['prixaccefil'];
+    echo $dataccefil['0']['prixaccefil'];
     echo '</td>';
     echo '<td headers="quant">';
     echo $quantiaccefil;
     echo '</td>';
     echo '<td headers="tot">';
-    echo $totalaccefil = $dataccefil['prixaccefil']*$quantiaccefil;
+    echo $totalaccefil = $dataccefil['0']['prixaccefil']*$quantiaccefil;
     echo '</td>';
     echo '</tr>';
-    $arrayAccefil = array_combine(array($dataccefil['accefil']), array($totalaccefil));
-    $arrayPriQuantiAccefil = array_combine(array($dataccefil['prixaccefil']), array($quantiaccefil));
+    $arrayAccefil = array_combine(array($dataccefil['0']['accefil']), array($totalaccefil));
+    $arrayPriQuantiAccefil = array_combine(array($dataccefil['0']['prixaccefil']), array($quantiaccefil));
 }
 
 elseif (empty($dataccefil) || $quantiaccefil==0) {
@@ -351,20 +351,20 @@ if(!empty($dataisorub) && $quantisorub>0){
     echo 'Isolateur ruban';
     echo '</td>';   
     echo '<td headers="desi">';
-    echo $dataisorub['isorub'];  
+    echo $dataisorub['0']['isorub'];  
     echo '</td>';
     echo '<td headers="prix">';  
-    echo $dataisorub['prixisoruban'];
+    echo $dataisorub['0']['prixisoruban'];
     echo '</td>';
     echo '<td headers="quant">';
     echo $quantisorub;
     echo '</td>';
     echo '<td headers="tot">';
-    echo $totalisorub = $dataisorub['prixisoruban']*$quantisorub;
+    echo $totalisorub = $dataisorub['0']['prixisoruban']*$quantisorub;
     echo '</td>';
     echo '</tr>';
-    $arrayIsorub = array_combine(array($dataisorub['isorub']), array($totalisorub));
-    $arrayPriQuantIsorub = array_combine(array($dataisorub['prixisoruban']), array($quantisorub));
+    $arrayIsorub = array_combine(array($dataisorub['0']['isorub']), array($totalisorub));
+    $arrayPriQuantIsorub = array_combine(array($dataisorub['0']['prixisoruban']), array($quantisorub));
 }
 
 elseif (empty($dataisorub) || $quantisorub==0) {
@@ -379,20 +379,20 @@ if(!empty($dataccerub) && $quantiaccerub>0){
     echo 'Accesoire ruban';
     echo '</td>';   
     echo '<td headers="desi">';
-    echo $dataccerub['accerub'];
+    echo $dataccerub['0']['accerub'];
     echo '</td>';
     echo '<td headers="prix">';  
-    echo $dataccerub['prixaccerub'];
+    echo $dataccerub['0']['prixaccerub'];
     echo '</td>';
     echo '<td headers="quant">';
     echo $quantiaccerub;
     echo '</td>';
     echo '<td headers="tot">';
-    echo $totalaccerub = $dataccerub['prixaccerub']*$quantiaccerub;
+    echo $totalaccerub = $dataccerub['0']['prixaccerub']*$quantiaccerub;
     echo '</td>';
     echo '</tr>';
-    $arrayAccerub = array_combine(array($dataccerub['accerub']), array($totalaccerub));
-    $arrayPriQuantiAccerub = array_combine(array($dataccerub['prixaccerub']), array($quantiaccerub));
+    $arrayAccerub = array_combine(array($dataccerub['0']['accerub']), array($totalaccerub));
+    $arrayPriQuantiAccerub = array_combine(array($dataccerub['0']['prixaccerub']), array($quantiaccerub));
 }
 
 elseif (empty($dataccerub) || $quantiaccerub==0 ) {
@@ -407,20 +407,20 @@ if(!empty($dataccentre) && $quantiaccentre>0 ){
     echo 'Accessoire entrée';
     echo '</td>';   
     echo '<td headers="desi">';
-    echo $dataccentre['acceentre'];  
+    echo $dataccentre['0']['acceentre'];  
     echo '</td>';
     echo '<td headers="prix">';  
-    echo $dataccentre['prixaccentre'];
+    echo $dataccentre['0']['prixaccentre'];
     echo '</td>';
     echo '<td headers="quant">';
     echo $quantiaccentre;
     echo '</td>';
     echo '<td headers="tot">';
-    echo $totalaccentre = $dataccentre['prixaccentre']*$quantiaccentre;
+    echo $totalaccentre = $dataccentre['0']['prixaccentre']*$quantiaccentre;
     echo '</td>';
     echo '</tr>';
-    $arrayAccentre = array_combine(array($dataccentre['acceentre']), array($totalaccentre));
-    $arrayPriQuantiAccentre = array_combine(array($dataccentre['prixaccentre']), array($quantiaccentre));
+    $arrayAccentre = array_combine(array($dataccentre['0']['acceentre']), array($totalaccentre));
+    $arrayPriQuantiAccentre = array_combine(array($dataccentre['0']['prixaccentre']), array($quantiaccentre));
 }
 
 elseif (empty($dataccentre) || $quantiaccentre==0  ) {
@@ -435,20 +435,20 @@ if(!empty($datatest) && $quantitest>0 ){
     echo 'Testeur';
     echo '</td>';   
     echo '<td headers="desi">';
-    echo $datatest['testeur'];  
+    echo $datatest['0']['testeur'];  
     echo '</td>';
     echo '<td headers="prix">';   
-    echo $datatest['prixtesteur'];
+    echo $datatest['0']['prixtesteur'];
     echo '</td>';
     echo '<td headers="quant">';
     echo $quantitest;
     echo '</td>';
     echo '<td headers="tot">';
-    echo $totaltest = $datatest['prixtesteur']*$quantitest;
+    echo $totaltest = $datatest['0']['prixtesteur']*$quantitest;
     echo '</td>';
     echo '</tr>';
-    $arrayTest = array_combine(array($datatest['testeur']), array($totaltest));
-    $arrayPriQuantiTest = array_combine(array($datatest['prixtesteur']), array($quantitest));
+    $arrayTest = array_combine(array($datatest['0']['testeur']), array($totaltest));
+    $arrayPriQuantiTest = array_combine(array($datatest['0']['prixtesteur']), array($quantitest));
 }
 
 elseif (empty($datatest) || $quantitest==0) {

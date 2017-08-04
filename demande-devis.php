@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
       $contenu = 
       '<html>
         <head>
-              <title ></title>
+          <title >Demande de devis</title>
         </head>
         <body>
           <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
@@ -100,34 +100,34 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
       
     
                                   <h3 style="font-style:italic;font-size:1em;">Tableau de la liste à fournir </h3>
-                    <table style="border: 1px solid #368BC1;text-align: center;">
-                      <thead> 
-                        <tr style="border: 1px solid #368BC1;text-align: center;">
-                          <th id="nom" style="border: 1px solid #368BC1;text-align: center;">
-                            <b>Nom</b>
-                          </th>
-                          <th id="prix-unitaire" style="border: 1px solid #368BC1;text-align: center;">
-                            <b>Prix Unitaire</b>
-                          </th>
-                          <th id="quantite" style="border: 1px solid #368BC1;text-align: center;">
-                            <b>Quantité</b>
-                          </th>
-                          <th id="prix-total" style="border: 1px solid #368BC1;text-align: center;">
-                            <b>Prix Total</b>
-                          </th>
-                        </tr>
-                      </thead> 
-                      <tbody> 
-                        <tr style="border: 1px solid #368BC1;text-align: center;">
-                          <td headers="nom" style="border: 1px solid #368BC1;text-align: center;">'.$nom.'</td>
-                          <td headers="prix-unitaire" style="border: 1px solid #368BC1;text-align: center;">'.$prixunit.'</td>
-                          <td headers="quantite" style="border: 1px solid #368BC1;text-align: center;">'.$quanti.'</td>
-                          <td headers="prix-total" style="border: 1px solid #368BC1;text-align: center;"> '.$total.'</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                                    <table style="border: 1px solid #368BC1;text-align: center;">
+                                      <thead> 
+                                        <tr style="border: 1px solid #368BC1;text-align: center;">
+                                          <th id="nom" style="border: 1px solid #368BC1;text-align: center;">
+                                            <b>Nom</b>
+                                          </th>
+                                          <th id="prix-unitaire" style="border: 1px solid #368BC1;text-align: center;">
+                                            <b>Prix Unitaire</b>
+                                          </th>
+                                          <th id="quantite" style="border: 1px solid #368BC1;text-align: center;">
+                                            <b>Quantité</b>
+                                          </th>
+                                          <th id="prix-total" style="border: 1px solid #368BC1;text-align: center;">
+                                            <b>Prix Total</b>
+                                          </th>
+                                        </tr>
+                                      </thead> 
+                                      <tbody> 
+                                        <tr style="border: 1px solid #368BC1;text-align: center;">
+                                          <td headers="nom" style="border: 1px solid #368BC1;text-align: center;">'.$nom.'</td>
+                                          <td headers="prix-unitaire" style="border: 1px solid #368BC1;text-align: center;">'.$prixunit.'</td>
+                                          <td headers="quantite" style="border: 1px solid #368BC1;text-align: center;">'.$quanti.'</td>
+                                          <td headers="prix-total" style="border: 1px solid #368BC1;text-align: center;"> '.$total.'</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
                                     <p>Total de votre devis : <b>'.$prixtotal.' </b> HT</p>
-                          </td>
+                            </td>
                           </tr>
                     </table>
                 </td>

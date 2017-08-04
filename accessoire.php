@@ -35,7 +35,7 @@ error_reporting(E_ALL);
               $accerub    = $_SESSION['mysql_result_accerub']  ;
               $acceentre  = $_SESSION['mysql_result_acceentre']  ;
               $testeur    = $_SESSION['mysql_result_testeur']  ;
-              
+
             echo '<ul class="collapsible" data-collapsible="accordion">';
             echo '<li>';
              if(!empty($piquet[0]['piquet'])){ 

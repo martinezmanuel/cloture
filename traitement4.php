@@ -1,16 +1,17 @@
 <?php
 session_start();
 error_reporting(E_ALL);
-/*$serveur = "localhost";
-$admin   = "root";
-$mdp     = "root";
-$base    = "cloture";*/
-$serveur = "localhost";
-$admin   = "clotucra_manu";
-$mdp     = "220972Manuel";
-$base    = "clotucra_cloture";
 
-$bdd4 = mysqli_connect($serveur,$admin,$mdp,$base);
+try {
+    $strConnection = 'mysql:host=localhost;dbname=clotucra_cloture'; //Ligne 1
+    $arrExtraParam= array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"); //Ligne 2
+    $pdo = new PDO($strConnection, 'clotucra_manu', '220972Manuel', $arrExtraParam); //Ligne 3; Instancie la connexion
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);//Ligne 4
+}
+catch(PDOException $e) {
+    $msg = 'ERREUR PDO dans ' . $e->getFile() . ' L.' . $e->getLine() . ' : ' . $e->getMessage();
+    die($msg);
+}
 
 $electrificateur = $_SESSION['electrificateur'];
 $fil             = $_SESSION['fil'];
@@ -84,36 +85,50 @@ $reqaccentre="SELECT * FROM accessoireentre
 $reqtest= "SELECT * FROM testeurht
 		WHERE testeur = '$testeur'
 		";					
-
-$resultat_elec     = mysqli_query($bdd4,$reqelec);
-$resultat_fil      = mysqli_query($bdd4,$reqfil);
-$resultat_rub      = mysqli_query($bdd4,$reqrub);
-$resultat_cord     = mysqli_query($bdd4,$reqcord);
-$resultat_filet    = mysqli_query($bdd4,$reqfilet);
-$resultat_piquet   = mysqli_query($bdd4,$reqpiquet);
-$resultat_cable    = mysqli_query($bdd4,$reqcable);
-$resultat_isocord  = mysqli_query($bdd4,$reqisocord);
-$resultat_isofil   = mysqli_query($bdd4,$reqisofil);
-$resultat_accefil  = mysqli_query($bdd4,$reqaccefil);
-$resultat_isorub   = mysqli_query($bdd4,$reqisorub);
-$resultat_accerub  = mysqli_query($bdd4,$reqaccerub);
-$resultat_accentre = mysqli_query($bdd4,$reqaccentre);
-$resultat_test     = mysqli_query($bdd4,$reqtest);
-
-$data_elec     = mysqli_fetch_array($resultat_elec);
-$data_fil      = mysqli_fetch_array($resultat_fil);
-$data_ruban    = mysqli_fetch_array($resultat_rub);
-$data_corde    = mysqli_fetch_array($resultat_cord);
-$data_filet    = mysqli_fetch_array($resultat_filet);
-$data_piquet   = mysqli_fetch_array($resultat_piquet);
-$data_cable    = mysqli_fetch_array($resultat_cable);
-$data_isocord  = mysqli_fetch_array($resultat_isocord);
-$data_isofil   = mysqli_fetch_array($resultat_isofil);
-$data_accefil  = mysqli_fetch_array($resultat_accefil);
-$data_isorub   = mysqli_fetch_array($resultat_isorub);
-$data_accerub  = mysqli_fetch_array($resultat_accerub);
-$data_accentre = mysqli_fetch_array($resultat_accentre);
-$data_test     = mysqli_fetch_array($resultat_test);
+$prep1 = $pdo->prepare($reqelec);
+$prep1->execute();
+$prep2 = $pdo->prepare($reqfil);
+$prep2->execute();
+$prep3 = $pdo->prepare($reqrub);
+$prep3->execute();
+$prep4 = $pdo->prepare($reqcord);
+$prep4->execute();
+$prep5 = $pdo->prepare($reqfilet);
+$prep5->execute();
+$prep6 = $pdo->prepare($reqpiquet);
+$prep6->execute();
+$prep7 = $pdo->prepare($reqcable);
+$prep7->execute();
+$prep8 = $pdo->prepare($reqisocord);
+$prep8->execute();
+$prep9 = $pdo->prepare($reqisofil);
+$prep9->execute();
+$prep10 = $pdo->prepare($reqaccefil);
+$prep10->execute();
+$prep11 = $pdo->prepare($reqisorub);
+$prep11->execute();
+$prep12 = $pdo->prepare($reqaccerub);
+$prep12->execute();
+$prep13 = $pdo->prepare($reqaccentre);
+$prep13->execute();
+$prep14 = $pdo->prepare($reqtest);
+$prep14->execute();
+ 
+//Récupérer toutes les données retournées
+$data_elec= $prep1->fetchAll(PDO::FETCH_ASSOC);
+$data_fil = $prep2->fetchAll(PDO::FETCH_ASSOC);
+$data_ruban = $prep3->fetchAll(PDO::FETCH_ASSOC);
+$data_corde = $prep4->fetchAll(PDO::FETCH_ASSOC);
+$data_filet= $prep5->fetchAll(PDO::FETCH_ASSOC);
+$data_piquet= $prep6->fetchAll(PDO::FETCH_ASSOC);
+$data_cable = $prep7->fetchAll(PDO::FETCH_ASSOC);
+$data_isocord= $prep8->fetchAll(PDO::FETCH_ASSOC);
+$data_isofil= $prep9->fetchAll(PDO::FETCH_ASSOC);
+$data_accefil= $prep10->fetchAll(PDO::FETCH_ASSOC);
+$data_isorub= $prep11->fetchAll(PDO::FETCH_ASSOC);
+$data_accerub= $prep12->fetchAll(PDO::FETCH_ASSOC);
+$data_accentre= $prep13->fetchAll(PDO::FETCH_ASSOC);
+$data_test= $prep14->fetchAll(PDO::FETCH_ASSOC);
 
 $_SESSION['data_elec']     = $data_elec;
 $_SESSION['data_fil']      = $data_fil;

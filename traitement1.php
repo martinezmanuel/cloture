@@ -13,9 +13,9 @@ catch(PDOException $e) {
     die($msg);
 }
 $animal      = $_SESSION['mysql_result_animal'] ; 
-$nom         = $_SESSION['mysql_result_type_elec']  ; 
-$longueur    = $_SESSION['mysql_result_distance']  ; 
-$type        = $_SESSION['mysql_result_veget']  ; 
+$nom         = $_SESSION['mysql_result_type_elec'] ; 
+$longueur    = $_SESSION['mysql_result_distance'] ; 
+$type        = $_SESSION['mysql_result_veget'] ; 
 $electriseur = $_POST['electriseur'];
 
 $query = "SELECT distinct conducteur FROM resultat

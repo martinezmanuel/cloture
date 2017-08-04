@@ -1,16 +1,18 @@
 <?php
 session_start();
 error_reporting(E_ALL);
-/*$serveur = "localhost";
-$admin   = "root";
-$mdp     = "root";
-$base    = "cloture";*/
-$serveur = "localhost";
-$admin   = "clotucra_manu";
-$mdp     = "220972Manuel";
-$base    = "clotucra_cloture";
 
-$bdd3 = mysqli_connect($serveur,$admin,$mdp,$base);
+try {
+    $strConnection = 'mysql:host=localhost;dbname=clotucra_cloture'; //Ligne 1
+    $arrExtraParam= array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"); //Ligne 2
+    $pdo = new PDO($strConnection, 'clotucra_manu', '220972Manuel', $arrExtraParam); //Ligne 3; Instancie la connexion
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);//Ligne 4
+}
+catch(PDOException $e) {
+    $msg = 'ERREUR PDO dans ' . $e->getFile() . ' L.' . $e->getLine() . ' : ' . $e->getMessage();
+    die($msg);
+}
+
 
 $conducteur  = $_SESSION['conduc'];
 $animal      = $_SESSION['mysql_result_animal'] ; 
@@ -27,8 +29,8 @@ $corde       = $_POST['corde'];
 
 $req3 = "SELECT distinct piquet
          FROM resultat
+        LEFT outer join piquetterre ON resultat.idpiquet = piquetterre.idpiquet 
         LEFT outer join conducteur ON resultat.idconducteur = conducteur.idconducteur
-        LEFT outer join piquetterre ON resultat.idpiquet = piquetterre.idpiquet
         LEFT outer join animaux ON resultat.idanimal = animaux.idanimal
         LEFT outer join type_electriseur ON resultat.idtype= type_electriseur.idtype
         LEFT outer join distance ON resultat.iddistance = distance.iddistance
@@ -37,8 +39,7 @@ $req3 = "SELECT distinct piquet
         AND animal = '$animal'
         AND nom = '$nom'
         AND longueur = '$longueur'
-        AND type = '$type'
-        ";
+        AND type = '$type'";
 
  $req4 = "SELECT distinct cable 
         FROM resultat 
@@ -52,8 +53,7 @@ $req3 = "SELECT distinct piquet
         AND animal = '$animal'
         AND nom = '$nom'
         AND longueur = '$longueur'
-        AND type = '$type'
-        ";
+        AND type = '$type'";
 
  $req5 = "SELECT distinct isocord 
         FROM resultat
@@ -153,89 +153,33 @@ $req3 = "SELECT distinct piquet
         AND longueur = '$longueur'
         AND type = '$type'";
 
-
-$result  = mysqli_query($bdd3 ,$req3);
-$result1 = mysqli_query($bdd3 ,$req4);
-$result2 = mysqli_query($bdd3 ,$req5);
-$result3 = mysqli_query($bdd3 ,$req6);
-$result4 = mysqli_query($bdd3 ,$req7);
-$result5 = mysqli_query($bdd3 ,$req8);
-$result6 = mysqli_query($bdd3 ,$req9);
-$result7 = mysqli_query($bdd3 ,$req0);
-$result8 = mysqli_query($bdd3 ,$req1);
-$array3 = [];
-$array4 = [];
-$array5 = [];
-$array6 = [];
-$array7 = [];
-$array8 = [];
-$array9 = [];
-$array0 = [];
-$array1 = [];
-
-while( $row3 = mysqli_fetch_assoc($result))
-{ 
-    $array3[] = $row3;
-}
-while( $row4 = mysqli_fetch_assoc($result1))
-{ 
-    $array4[] = $row4;
-}
-while( $row5 = mysqli_fetch_assoc($result2))
-{ 
-    $array5[] = $row5;
-}
-while( $row6 = mysqli_fetch_assoc($result3))
-{ 
-    $array6[] = $row6;
-}
-while( $row7 = mysqli_fetch_assoc($result4))
-{ 
-    $array7[] = $row7;
-}
-while( $row8 = mysqli_fetch_assoc($result5))
-{ 
-    $array8[] = $row8;
-}
-while( $row9 = mysqli_fetch_assoc($result6))
-{ 
-    $array9[] = $row9;
-}
-while( $row0 = mysqli_fetch_assoc($result7))
-{ 
-    $array0[] = $row0;
-}
-while( $row1 = mysqli_fetch_assoc($result8))
-{ 
-    $array1[] = $row1;
-}
-
-$piquet    = array_values($array3);
-$piquet    = array_unique( $piquet,SORT_REGULAR );
-
-$cable     = array_values($array4);
-$cable     = array_unique( $cable ,SORT_REGULAR );
-
-$isocord   = array_values($array5);
-$isocord   = array_unique( $isocord ,SORT_REGULAR );
-
-$isofil    = array_values($array6);
-$isofil    = array_unique( $isofil,SORT_REGULAR );
-
-$accefil   = array_values($array7);
-$accefil   = array_unique( $accefil ,SORT_REGULAR );
-
-$isorub    = array_values($array8);
-$isorub    = array_unique( $isorub ,SORT_REGULAR );
-
-$accerub   = array_values($array9);
-$accerub   = array_unique( $accerub,SORT_REGULAR );
-
-$acceentre = array_values($array0);
-$acceentre = array_unique( $acceentre,SORT_REGULAR );
-
-$testeur   = array_values($array1);
-$testeur   = array_unique( $testeur,SORT_REGULAR );
+$prep=$pdo->prepare($req3);
+$prep->execute();
+$prep1=$pdo->prepare($req4);
+$prep1->execute();
+$prep2=$pdo->prepare($req5);
+$prep2->execute();
+$prep3=$pdo->prepare($req6);
+$prep3->execute();
+$prep4=$pdo->prepare($req7);
+$prep4->execute();
+$prep5=$pdo->prepare($req8);
+$prep5->execute();
+$prep6=$pdo->prepare($req9);
+$prep6->execute();
+$prep7=$pdo->prepare($req0);
+$prep7->execute();
+$prep8=$pdo->prepare($req1);
+$prep8->execute();
+$piquet = $prep->fetchAll();
+$cable = $prep1->fetchAll();
+$isocord = $prep2->fetchAll();
+$isofil = $prep3->fetchAll();
+$accefil = $prep4->fetchAll();
+$isorub = $prep5->fetchAll();
+$accerub = $prep6->fetchAll();
+$acceentre = $prep7->fetchAll();
+$testeur = $prep8->fetchAll();
 
 $_SESSION['mysql_result_piquet']    = $piquet ;
 $_SESSION['mysql_result_cable']     = $cable  ;
